@@ -7,13 +7,15 @@
  */
 
 * {
-    red:                         #EBBD6F4d;
-    blue:                        #7A774A80;
-    lightfg:                     #FAFDDD;
-    lightbg:                     #B1863299;
-    foreground:                  #F4CF70cc;
-    background:                  #7B6C2833;
-    background-color:            #60542F33;
+    lighttext:                   #e7ebde;
+    text:                        #0e0e0e;
+    red:                         #ad80344d;
+    blue:                        #3943074d;
+    lightfg:                     #e7ebdeb3;
+    lightbg:                     #1e1e1e99;
+    foreground:                  #be9b4ccc;
+    background:                  #be9b4c1a;
+    background-color:            #0e0e0e1a;
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @lightbg;
@@ -22,13 +24,13 @@
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
-    normal-foreground:           @foreground;
+    normal-foreground:           @text;
     normal-background:           @background;
     active-foreground:           @blue;
     active-background:           @background;
     urgent-foreground:           @red;
     urgent-background:           @background;
-    alternate-normal-foreground: @foreground;
+    alternate-normal-foreground: @text;
     alternate-normal-background: @lightbg;
     alternate-active-foreground: @blue;
     alternate-active-background: @lightbg;
@@ -43,40 +45,49 @@ window {
     x-offset:         40px;
     y-offset:         -50px;
     background-color: @background;
-    border:           0;
-    padding:          5;
+    border:           10px 2px dash 10px 2px dash ;
+    border-radius:    20;
+    padding:          10;
+    padding-radius:   5;
 }
 mainbox {
-    border:           0;
-    padding:          0;
+    border:           6px 2px dash 6px 2px dash ;
+    border-radius:    20;
+    padding:          14px ;
 }
 message {
-    border:           1px dash 0px 0px ;
+    border:           10px dash 0px 0px ;
+    border-radius:    20;
     border-color:     @separatorcolor;
-    padding:          1px ;
+    padding:          10px ;
 }
 textbox {
     text-color:       @foreground;
 }
 listview {
-    lines:            3;
-    columns:          4;
     fixed-height:     0;
-    border:           2px dash 0px 0px ;
+    border:           4px dash 0px 0px ;
+    border-radius:    20;
     border-color:     @separatorcolor;
-    spacing:          2px ;
-    scrollbar:        true;
-    padding:          2px 0px 0px ;
+    spacing:          3px ;
+    scrollbar:        false;
+    padding:          3px 0px 0px ;
+    lines:            4;
+    columns:          3;
 }
 element-icon {
-    size:             2em ;
+    size:             2.5em ;
 }
 element {
   orientation: horizontal;
 }
+element-text {
+      vertical-align: 0.45;
+}
 element {
-    border:           0;
-    padding:          1px ;
+    border:           4px dash;
+    border-radius:    20;
+    padding:          10px ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -134,22 +145,27 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    spacing:          0px;
-    text-color:       @normal-foreground;
-    padding:          1px ;
+    padding:          5px;
+    border-spacing:   4 4 4 4;
+    border:           6px dash 2px dash 2px dash 3px dash ;
+    border-radius:    40%;
+    spacing:          10px;
+    margin:           5px 5px 5px;
+    border-color:     @foreground;
+    text-color:       @lighttext;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 case-indicator {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @lighttext;
 }
 entry {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @lighttext;
 }
 prompt {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @lighttext;
 }
 textbox-prompt-colon {
     expand:           false;

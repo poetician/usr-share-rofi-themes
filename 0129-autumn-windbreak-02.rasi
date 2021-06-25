@@ -1,19 +1,19 @@
 /**
- * Base16 oomox-0004 Leopard ROFI Color theme
+ * Base16 oomox-0067 Peaks and Plain ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-0004 Leopard
+ *  Scheme: oomox-0067 Peaks and Plain
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    red:                         #EBBD6F4d;
-    blue:                        #7A774A80;
-    lightfg:                     #FAFDDD;
-    lightbg:                     #B1863299;
-    foreground:                  #F4CF70cc;
-    background:                  #7B6C2833;
-    background-color:            #60542F33;
+    red:                         #f07e3133;
+    blue:                        #35414a99;
+    lightfg:                     #e6e7e433;
+    lightbg:                     #35414a;
+    foreground:                  #ffffffb3;
+    background:                  #35414a1a;
+    background-color:            #f17b2933;
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @lightbg;
@@ -37,46 +37,51 @@
     spacing:                     2;
 }
 window {
-    anchor:           southwest;
-    location:         southwest;
-    width:            60%;
-    x-offset:         40px;
-    y-offset:         -50px;
     background-color: @background;
-    border:           0;
-    padding:          5;
+    border:           1 10 10 1;
+    border-radius:    1 2 3 1;
+    padding:          2 25 5 2;
+    x-offset:         0px;
+    y-offset:         -40px;
 }
 mainbox {
-    border:           0;
-    padding:          0;
+    border:           1 10 10 1;
+    border-radius:    1 2 3 1;
+    padding:          2 25 5 2;
 }
 message {
-    border:           1px dash 0px 0px ;
+    border:           1 10 10 1;
+    border-radius:    1 2 3 1;
     border-color:     @separatorcolor;
-    padding:          1px ;
+    padding:          5 15 5 1 ;
 }
 textbox {
     text-color:       @foreground;
 }
-listview {
-    lines:            3;
-    columns:          4;
-    fixed-height:     0;
-    border:           2px dash 0px 0px ;
-    border-color:     @separatorcolor;
-    spacing:          2px ;
-    scrollbar:        true;
-    padding:          2px 0px 0px ;
-}
 element-icon {
-    size:             2em ;
+    size:             3em ;
 }
 element {
   orientation: horizontal;
 }
+element-text {
+      vertical-align: 0.50;
+}
+listview {
+    fixed-height:     0;
+    border:           1 10 10 1;
+    border-radius:    1 2 3 1;
+    border-color:     @separatorcolor;
+    spacing:          12px ;
+    scrollbar:        false;
+    padding:          2 25 5 2;
+    lines:            5;
+    columns:          3;
+}
 element {
-    border:           0;
-    padding:          1px ;
+    border:           1 10 10 1;
+    border-radius:    1 2 3 1;
+    padding:          2 25 5 2;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -115,14 +120,14 @@ element alternate.active {
     text-color:       @alternate-active-foreground;
 }
 scrollbar {
-    width:            4px ;
-    border:           0;
+    width:            0px ;
+    border:           1 10 10 1;
     handle-color:     @normal-foreground;
     handle-width:     8px ;
     padding:          0;
 }
 sidebar {
-    border:           2px dash 0px 0px ;
+    border:           1 10 10 1;
     border-color:     @separatorcolor;
 }
 button {
@@ -134,12 +139,16 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    spacing:          0px;
+    border:           1 10 10 1;
+    border-radius:    1 2 3 1;
+    padding:          2 2 2 ;
+    border-spacing:   0px 0 0 0;
+    spacing:          2 2 2 ;
+    margin:           0 ;
+    border-color:     @foreground;
     text-color:       @normal-foreground;
-    padding:          1px ;
-    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
-}
-case-indicator {
+    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];}
+    case-indicator {
     spacing:          0;
     text-color:       @normal-foreground;
 }
