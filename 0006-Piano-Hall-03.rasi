@@ -1,36 +1,34 @@
 /**
- * Base16 oomox-0004 Leopard ROFI Color theme
+ * Base16 oomox-0006 Piano Hall ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-0004 Leopard
+ *  Scheme: oomox-0006 Piano Hall
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    input-text:                  #FAFDDD;
-    text:                        #60542F;
-    red:                         #EBBD6F66;
-    blue:                        #7A774A66;
-    lightfg:                     #FAFDDD66;
-    lightbg:                     #B1863266;
-    foreground:                  #F4CF7066;
-    background:                  #7B6C2866;
-    background-color:            #60542F66;
+    red:                         #B07959;
+    blue:                        #8D9BA190;
+    lightfg:                     #909293;
+    lightbg:                     #21242780;
+    foreground:                  #9EA0B0;
+    background:                  #21242733;
+    background-color:            #21242733;
     separatorcolor:              @foreground;
     border-color:                @foreground;
-    selected-normal-foreground:  @text;
+    selected-normal-foreground:  @lightbg;
     selected-normal-background:  @lightfg;
     selected-active-foreground:  @background;
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
-    normal-foreground:           @text;
+    normal-foreground:           @foreground;
     normal-background:           @background;
     active-foreground:           @blue;
     active-background:           @background;
     urgent-foreground:           @red;
     urgent-background:           @background;
-    alternate-normal-foreground: @text;
+    alternate-normal-foreground: @foreground;
     alternate-normal-background: @lightbg;
     alternate-active-foreground: @blue;
     alternate-active-background: @lightbg;
@@ -39,55 +37,55 @@
     spacing:                     2;
 }
 window {
-    anchor:           southwest;
-    location:         southwest;
+    anchor:           northwest;
+    location:         northwest;
     width:            60%;
     x-offset:         40px;
     y-offset:         60px;
     background-color: @background;
-    border:           1 8 2 12 ;
-    border-radius:    28;
-    padding:          2 4 2 6 ;
+    border:           4 dash 8px 6 ;
+    border-radius:    16;
+    padding:          4;
 }
 mainbox {
-    border:           1 8 2 12 ;
-    border-radius:    20;
-    padding:          2 4 2 6 ;
+    border:           2px dash 2px 2px 2px ;
+    border-radius:    8;
+    padding:          8;
 }
 message {
-    border:           1 8 2 12 ;
-    border-radius:    16;
+    border:           4px dash 6px 8px ;
+    border-radius:    10;
     border-color:     @separatorcolor;
-    padding:          2 4 2 6 ;
-    spacing:          10px;
+    padding:          5px ;
 }
 textbox {
     text-color:       @foreground;
 }
 listview {
-    fixed-height:     0;
-    border:           1 8 2 12 ;
-    border-radius:    16;
-    border-color:     @separatorcolor;
-    spacing:          10px ;
-    scrollbar:        false;
-    padding:          2 4 2 6 ;
     lines:            3;
     columns:          5;
+    fixed-height:     0;
+    border:           8px dash 4px 6px ;
+    border-radius:    10;
+    border-color:     @separatorcolor;
+    spacing:          7px ;
+    scrollbar:        false;
+    padding:          7px 7px 7px ;
 }
 element-icon {
-    size:             2.2em ;
+    size:             1.5em ;
 }
 element {
   orientation: vertical;
 }
 element-text {
-      horizontal-align: 0.45;
+      horizontal-align: 0.5;
 }
 element {
-    border:           1 8 2 12 ;
-    border-radius:    12;
-    padding:          2 4 2 6 ;
+    border:           5;
+    border-radius:    20;
+    border-color:     @red;
+    padding:          10px ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -145,27 +143,27 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    padding:          2 4 2 6 ;
-    border-spacing:   0 ;
-    border:           1 8 2 12 ;
-    border-radius:    20 ;
-    spacing:          0 0 0 0 ;
-    margin:           0px;
+    padding:          4px dash 4px 4px ;
+    border-spacing:   4 4 4 4;
+    border:           8px dash 4px 2px ;
+    border-radius:    40%;
+    spacing:          4px ;
+    margin:           0px dash 48px 4px;
     border-color:     @foreground;
-    text-color:       @input-text;
+    text-color:       @normal-foreground;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 case-indicator {
     spacing:          0;
-    text-color:       @input-text;
+    text-color:       @normal-foreground;
 }
 entry {
     spacing:          0;
-    text-color:       @input-text;
+    text-color:       @normal-foreground;
 }
 prompt {
     spacing:          0;
-    text-color:       @input-text;
+    text-color:       @normal-foreground;
 }
 textbox-prompt-colon {
     expand:           false;

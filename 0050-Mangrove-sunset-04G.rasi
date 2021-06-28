@@ -1,25 +1,25 @@
 /**
- * Base16 oomox-0004 Leopard ROFI Color theme
+ * Base16 oomox-0050 Round Suru ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-0004 Leopard
+ *  Scheme: oomox-0050 Round Suru
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    input-text:                  #FAFDDD;
-    text:                        #60542F;
-    red:                         #EBBD6F66;
-    blue:                        #7A774A66;
-    lightfg:                     #FAFDDD66;
-    lightbg:                     #B1863266;
-    foreground:                  #F4CF7066;
-    background:                  #7B6C2866;
-    background-color:            #60542F66;
+    text:                        #FDFCDE;
+    black:                       #00000000;
+    red:                         #D04737;
+    blue:                        #8b9ebc99;
+    lightfg:                     #FFD193;
+    lightbg:                     #a2a9ba4d;
+    foreground:                  #8b9ebc99;
+    background:                  #20252d80;
+    background-color:            #2c2f5040;
     separatorcolor:              @foreground;
     border-color:                @foreground;
-    selected-normal-foreground:  @text;
-    selected-normal-background:  @lightfg;
+    selected-normal-foreground:  @lightfg;
+    selected-normal-background:  @lightbg;
     selected-active-foreground:  @background;
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
@@ -41,53 +41,51 @@
 window {
     anchor:           southwest;
     location:         southwest;
-    width:            60%;
+    width:            50%;
     x-offset:         40px;
-    y-offset:         60px;
-    background-color: @background;
-    border:           1 8 2 12 ;
-    border-radius:    28;
-    padding:          2 4 2 6 ;
+    y-offset:         -40px;
+    background-color: @black;
+    border:           4px 12px 12px 4px ;
+    border-radius:    12;
+    padding:          16;
 }
 mainbox {
-    border:           1 8 2 12 ;
-    border-radius:    20;
-    padding:          2 4 2 6 ;
+    border:           4px 12px 12px 4px ;
+    border-radius:    10;
+    padding:          14;
 }
 message {
-    border:           1 8 2 12 ;
-    border-radius:    16;
+    border:           4px 12px 12px 4px ;
+    border-radius:    12;
     border-color:     @separatorcolor;
-    padding:          2 4 2 6 ;
-    spacing:          10px;
+    padding:          14px ;
 }
 textbox {
     text-color:       @foreground;
 }
 listview {
+    lines:            7;
+    columns:          3;
     fixed-height:     0;
-    border:           1 8 2 12 ;
-    border-radius:    16;
+    border:           4px 12px 12px 4px ;
+    border-radius:    8;
     border-color:     @separatorcolor;
-    spacing:          10px ;
+    spacing:          20px ;
     scrollbar:        false;
-    padding:          2 4 2 6 ;
-    lines:            3;
-    columns:          5;
+    padding:          12px ;
 }
 element-icon {
-    size:             2.2em ;
+    size:             2em ;
 }
 element {
-  orientation: vertical;
-}
-element-text {
-      horizontal-align: 0.45;
+  orientation: horizontal;
 }
 element {
-    border:           1 8 2 12 ;
-    border-radius:    12;
-    padding:          2 4 2 6 ;
+    children: [element-icon, element-text];
+    background-image: linear-gradient(to left, #FFEC9866, #85A7B133, #489D1B33);
+    border:           4px 12px 12px 4px ;
+    border-radius:    6 ;
+    padding:          8px ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -133,7 +131,8 @@ scrollbar {
     padding:          0;
 }
 sidebar {
-    border:           2px dash 0px 0px ;
+    border:           4px 12px 12px 4px ;
+    border-radius:    60;
     border-color:     @separatorcolor;
 }
 button {
@@ -145,27 +144,35 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    padding:          2 4 2 6 ;
-    border-spacing:   0 ;
-    border:           1 8 2 12 ;
-    border-radius:    20 ;
-    spacing:          0 0 0 0 ;
-    margin:           0px;
+    padding:          6px ;
+    border-spacing:   8 ;
+    border:           4px 6px 6px 4px ;
+    border-radius:    4;
+    spacing:          10px;
+    margin:           5px 5px 5px;
     border-color:     @foreground;
-    text-color:       @input-text;
-    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
+    text-color:       @normal-foreground;
+    background-color: @black;
+    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];}
+case-indicator {
+    spacing:          0;
+    background-color: @black;
+    text-color:       @normal-foreground;
 }
 case-indicator {
     spacing:          0;
-    text-color:       @input-text;
+    background-color: @black;
+    text-color:       @normal-foreground;
 }
 entry {
     spacing:          0;
-    text-color:       @input-text;
+    background-color: @black;
+    text-color:       @normal-foreground;
 }
 prompt {
     spacing:          0;
-    text-color:       @input-text;
+    background-color: @black;
+    text-color:       @normal-foreground;
 }
 textbox-prompt-colon {
     expand:           false;

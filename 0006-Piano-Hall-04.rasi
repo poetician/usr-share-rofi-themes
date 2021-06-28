@@ -1,36 +1,37 @@
 /**
- * Base16 oomox-0004 Leopard ROFI Color theme
+ * Base16 oomox-0006 Piano Hall ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-0004 Leopard
+ *  Scheme: oomox-0006 Piano Hall
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    input-text:                  #FAFDDD;
-    text:                        #60542F;
-    red:                         #EBBD6F66;
-    blue:                        #7A774A66;
-    lightfg:                     #FAFDDD66;
-    lightbg:                     #B1863266;
-    foreground:                  #F4CF7066;
-    background:                  #7B6C2866;
-    background-color:            #60542F66;
+    white:                       #F2EFDE;
+    black:                       #030303;
+    grey:                        #83909d;
+    red:                         #99775899;
+    blue:                        #66729180;
+    lightfg:                     #8d9ba1;
+    lightbg:                     #c3c1c180;
+    foreground:                  #65695d;
+    background:                  #21242766;
+    background-color:            #9ea0b01a;
     separatorcolor:              @foreground;
     border-color:                @foreground;
-    selected-normal-foreground:  @text;
+    selected-normal-foreground:  @black;
     selected-normal-background:  @lightfg;
-    selected-active-foreground:  @background;
+    selected-active-foreground:  @black;
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
-    normal-foreground:           @text;
+    normal-foreground:           @white;
     normal-background:           @background;
     active-foreground:           @blue;
     active-background:           @background;
     urgent-foreground:           @red;
     urgent-background:           @background;
-    alternate-normal-foreground: @text;
+    alternate-normal-foreground: @white;
     alternate-normal-background: @lightbg;
     alternate-active-foreground: @blue;
     alternate-active-background: @lightbg;
@@ -39,55 +40,55 @@
     spacing:                     2;
 }
 window {
-    anchor:           southwest;
-    location:         southwest;
-    width:            60%;
-    x-offset:         40px;
+    anchor:           north;
+    location:         north;
+    width:            70%;
+    x-offset:         0px;
     y-offset:         60px;
     background-color: @background;
-    border:           1 8 2 12 ;
-    border-radius:    28;
-    padding:          2 4 2 6 ;
+    border:           8;
+    border-radius:    24;
+    padding:          6;
 }
 mainbox {
-    border:           1 8 2 12 ;
+    border:           2;
     border-radius:    20;
-    padding:          2 4 2 6 ;
+    padding:          5;
 }
 message {
-    border:           1 8 2 12 ;
-    border-radius:    16;
+    border:           3px dash 3px 3px ;
+    border-radius:    10;
     border-color:     @separatorcolor;
-    padding:          2 4 2 6 ;
-    spacing:          10px;
+    padding:          5px ;
 }
 textbox {
     text-color:       @foreground;
 }
 listview {
+    lines:            3;
+    columns:          6;
     fixed-height:     0;
-    border:           1 8 2 12 ;
+    border:           7px dash 7px 7px ;
     border-radius:    16;
     border-color:     @separatorcolor;
-    spacing:          10px ;
+    spacing:          7px ;
     scrollbar:        false;
-    padding:          2 4 2 6 ;
-    lines:            3;
-    columns:          5;
+    padding:          7px 7px 7px 7px ;
 }
 element-icon {
     size:             2.2em ;
 }
 element {
-  orientation: vertical;
+  orientation: horizontal;
 }
 element-text {
-      horizontal-align: 0.45;
+      vertical-align: 0.45;
 }
 element {
-    border:           1 8 2 12 ;
-    border-radius:    12;
-    padding:          2 4 2 6 ;
+    border:           4;
+    border-radius:    16;
+    border-color:     @red;
+    padding:          10px ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -145,27 +146,27 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    padding:          2 4 2 6 ;
-    border-spacing:   0 ;
-    border:           1 8 2 12 ;
-    border-radius:    20 ;
-    spacing:          0 0 0 0 ;
-    margin:           0px;
+    padding:          4 4 4 20 ;
+    border-spacing:   14;
+    border:           10px dash 4px 1px ;
+    border-radius:    20%;
+    spacing:          4px;
+    margin:           10;
     border-color:     @foreground;
-    text-color:       @input-text;
+    text-color:       @white;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 case-indicator {
     spacing:          0;
-    text-color:       @input-text;
+    text-color:       @white;
 }
 entry {
     spacing:          0;
-    text-color:       @input-text;
+    text-color:       @white;
 }
 prompt {
     spacing:          0;
-    text-color:       @input-text;
+    text-color:       @white;
 }
 textbox-prompt-colon {
     expand:           false;
