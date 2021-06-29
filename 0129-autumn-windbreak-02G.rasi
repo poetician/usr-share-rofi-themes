@@ -1,35 +1,37 @@
 /**
- * Base16 oomox-0137 Flower Gradient ROFI Color theme
+ * Base16 oomox-0129 Autumn Windbreak ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-0137 Flower Gradient
+ *  Scheme: oomox-0067 Peaks and Plain
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    black:                       #000000;
-    red:                         #C15FB4;
-    blue:                        #6F2C80;
-    lightfg:                     #FFE9FE;
-    lightbg:                     #FCAD8F;
-    foreground:                  #3C5068;
-    background:                  #98629Bb3;
-    background-color:            #0000001a;
+    clear:                       #00000000;
+    hay:                         #695741;
+    green:                       #545927;
+    red:                         #b5967033;
+    blue:                        #35414a99;
+    lightfg:                     #878d9b33;
+    lightbg:                     #35414a;
+    foreground:                  #e4e5eab3;
+    background:                  #6957411a;
+    background-color:            #6957411a;
     separatorcolor:              @foreground;
-    border-color:                @lightbg;
-    selected-normal-foreground:  @lightfg;
-    selected-normal-background:  @foreground;
-    selected-active-foreground:  @background-color;
+    border-color:                @foreground;
+    selected-normal-foreground:  @lightbg;
+    selected-normal-background:  @lightfg;
+    selected-active-foreground:  @background;
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
-    normal-foreground:           @black;
+    normal-foreground:           @foreground;
     normal-background:           @background;
     active-foreground:           @blue;
     active-background:           @background;
     urgent-foreground:           @red;
     urgent-background:           @background;
-    alternate-normal-foreground: @blue;
+    alternate-normal-foreground: @foreground;
     alternate-normal-background: @lightbg;
     alternate-active-foreground: @blue;
     alternate-active-background: @lightbg;
@@ -38,59 +40,56 @@
     spacing:                     2;
 }
 window {
-    anchor:           east;
-    location:         east;
-    width:            33%;
-    x-offset:         -20px;
-    y-offset:         120px;
+    anchor:           northwest ;
+    location:         northwest ;
+    width:            50%;
+    x-offset:         50px;
+    y-offset:         50px;
     background-color: @background;
-    border:           0 0 4 0;
-    border-radius:    20;
-    border-color:     @blue;
-    padding:          0 0 4 0;
-    }
+    border:           0 ;
+    border-radius:    12 ;
+    padding:          12 ;
+}
 mainbox {
-    border:           0 0 4 0;
-    border-radius:    20;
-    border-color:     @blue;
-    padding:          0 0 4 0;
+    border:           3 ;
+    border-radius:    6 ;
+    padding:          6 12 12 6 ;
 }
 message {
-    border:           10px 0px 10px 0px ;
-    border-radius:    20;
-    border-color:     @blue;
-    padding:          10px 0px 5px 0px;
+    border:           3 6 9 6 ;
+    border-radius:    3 9 15 6 ;
+    border-color:     @separatorcolor;
+    padding:          5 15 5 1 ;
 }
 textbox {
     text-color:       @foreground;
 }
-listview {
-    lines:            7;
-    columns:          2;
-    fixed-height:     0;
-    border:           10px 0px 0px 0px ;
-    border-radius:    20;
-    border-color:     #00000000;
-    spacing:          10px ;
-    scrollbar:        false;
-    padding:          4px 0px 0px 0px;
-}
 element-icon {
-    size:             2.2em ;
+    size:             3em ;
 }
 element {
   orientation: horizontal;
 }
 element-text {
-      vertical-align: 0.45;
+      vertical-align: 0.50;
+}
+listview {
+    lines:            7;
+    columns:          3;
+    fixed-height:     0;
+    border:           6 9 6 9 ;
+    border-radius:    6 ;
+    border-color:     @separatorcolor;
+    spacing:          12px ;
+    scrollbar:        false;
+    padding:          9 ;
 }
 element {
     children: [element-icon, element-text];
-    background-image: linear-gradient(to left, yellow/40%, white/30%, yellow/20%);
-    border:           10 0 10 0;
-    border-color:     @blue;
-    border-radius:    20;
-    padding:          5px ;
+    background-image: linear-gradient(to right, #878d9b4d, #e4e5ea4d, #6957414d);
+    border:           4 ;
+    border-radius:    6 9 12 9 ;
+    padding:          6 12 12 9 ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -129,51 +128,52 @@ element alternate.active {
     text-color:       @alternate-active-foreground;
 }
 scrollbar {
-    width:            4px ;
-    border:           0;
+    width:            0px ;
+    border:           3 6 9 6 ;
     handle-color:     @normal-foreground;
     handle-width:     8px ;
     padding:          0;
 }
 sidebar {
-    border:           2px dash 0px 0px ;
+    border:           3 6 9 6 ;
     border-color:     @separatorcolor;
 }
 button {
     spacing:          0;
-    text-color:       @lightfg;
+    text-color:       @normal-foreground;
 }
 button selected {
     background-color: @selected-normal-background;
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    border-radius:    30%;
-    padding:          5px;
-    border-spacing:   5px 5px 5px 5px;
-    border:           5px;
-    spacing:          10px;
-    margin:           5px 5px 5px 5px;
+    border:           3 ;
+    border-radius:    9 ;
+    padding:          6 6 6 24 ;
+    border-spacing:   6 ;
+    spacing:          6 ;
+    margin:           6 100 6 100 ;
+    background-color: @clear;
     border-color:     @foreground;
-    text-color:       @lightfg;
+    text-color:       @normal-foreground;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];}
-case-indicator {
-    spacing:          5;
-    text-color:       @lightfg;
-}
-case-indicator {
+    case-indicator {
     spacing:          0;
-    text-color:       @lightfg;
+    background-color: @clear;
+    text-color:       @normal-foreground;
 }
 entry {
     spacing:          0;
-    text-color:       @lightfg;
+    background-color: @clear;
+    text-color:       @normal-foreground;
 }
 prompt {
     spacing:          0;
-    text-color:       @lightfg;
+    background-color: @clear;
+    text-color:       @normal-foreground;
 }
 textbox-prompt-colon {
+    background-color: @clear;
     expand:           false;
     str:              ":";
     margin:           0px 0.3000em 0.0000em 0.0000em ;
