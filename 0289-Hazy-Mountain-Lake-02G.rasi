@@ -1,0 +1,181 @@
+/**
+ * Base16 oomox-0289 Hazy Mountain Lake ROFI Color theme
+ *
+ * Authors
+ *  Scheme: oomox-0289 Hazy Mountain Lake
+ *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
+ */
+
+* {
+    clear:                       #00000000;
+    black:                       #3B303E99;
+    yellow:                      #FED09C;
+    brown:                       #3B303E1a;
+    red:                         #A6451C;
+    blue:                        #00000000;
+    lightfg:                     #7CA2B533;
+    lightbg:                     #FED09C40;
+    foreground:                  #547245;
+    background:                  #FABB8833;
+    background-color:            #FABB8833;
+    separatorcolor:              @foreground;
+    border-color:                @brown;
+    selected-normal-foreground:  @black;
+    selected-normal-background:  @lightfg;
+    selected-active-foreground:  @black;
+    selected-active-background:  @blue;
+    selected-urgent-foreground:  @background;
+    selected-urgent-background:  @red;
+    normal-foreground:           @black;
+    normal-background:           @background;
+    active-foreground:           @blue;
+    active-background:           @background;
+    urgent-foreground:           @red;
+    urgent-background:           @background;
+    alternate-normal-foreground: @black;
+    alternate-normal-background: @lightbg;
+    alternate-active-foreground: @blue;
+    alternate-active-background: @lightbg;
+    alternate-urgent-foreground: @red;
+    alternate-urgent-background: @lightbg;
+    spacing:                     2;
+}
+window {
+    anchor:           south;
+    location:         south;
+    width:            90%;
+    background-color: @clear;
+    border:           0px;
+    border-radius:    10;
+    x-offset:         0px;
+    y-offset:         -40px;
+}
+mainbox {
+    border:           0;
+    border-radius:    27 ;
+    padding:          0;
+}
+message {
+    border:           1px 0px 0px 0px ;
+    border-radius:    10;
+    border-color:     @separatorcolor;
+    padding:          10px ;
+}
+textbox {
+    text-color:       @foreground;
+}
+listview {
+    lines:            2;
+    columns:          7;
+    fixed-height:     0;
+    border:           0px 0px 0px 0px ;
+    border-radius:    10;
+    border-color:     @separatorcolor;
+    spacing:          5px ;
+    scrollbar:        false;
+    padding:          0px 0px 0px ;
+}
+element-icon {
+    size:             2.5em ;
+}
+element {
+  orientation: horizontal;
+}
+element-text {
+      vertical-align: 0.5;
+}
+element {
+    children: [element-icon, element-text];
+    background-image: linear-gradient(to right, #FED09C66, #A6451C4d, #54724533);
+    border:           1 8 4 8 ;
+    border-radius:    27 27 4 4 ;
+    padding:          5px ;
+}
+element normal.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+}
+element normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+element normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+element selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+element selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+element selected.active {
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+element alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+element alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+element alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+scrollbar {
+    width:            4px ;
+    border:           0;
+    handle-color:     @normal-foreground;
+    handle-width:     8px ;
+    padding:          0;
+}
+sidebar {
+    border:           2px 0px 0px 0px ;
+    border-color:     @separatorcolor;
+}
+button {
+    spacing:          0;
+    text-color:       @normal-foreground;
+}
+button selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+inputbar {
+    border-spacing:   5 5 5 5;
+    border:           15 3 9 3;
+    border-radius:    10 10 0 0;
+    padding:          4 24 4 24 ;
+    margin:           5px 260px 5px 250px ;
+    border-color:     @black;
+    text-color:       @yellow;
+    background-color: @clear;
+    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+case-indicator {
+    spacing:          0;
+    background-color: @clear;
+    text-color:       @yellow;
+}
+entry {
+    spacing:          0;
+    background-color: @clear;
+    text-color:       @yellow;
+}
+prompt {
+    spacing:          0;
+    background-color: @clear;
+    text-color:       @yellow;
+}
+textbox-prompt-colon {
+    expand:           false;
+    background-color: @clear;
+    str:              ":";
+    margin:           0px 0.3000em 0.0000em 0.0000em ;
+    text-color:       inherit;
+}
